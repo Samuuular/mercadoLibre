@@ -1,0 +1,82 @@
+* {
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+}
+.cajaBody {
+    background-color:#ebebeb;
+}
+.cajaBody__logoMercadoLibre{
+    width: 70vw;
+    display: block;
+}
+.titulares {
+    font-size: 24px;
+}
+.descuentos {
+    font-size: 16px;
+}
+.precios {
+    font-size: 18px;
+}
+.menuHamburguesa{
+    border-radius: 5px;
+    width: 20px;
+    padding: 5px;
+    background-color: blue;
+    text-align: center;
+    color: white;
+    margin:auto
+}
+.cajaHeader{
+    background-color:#EAC926;
+    background-size: contain;
+    padding-bottom: 10px;
+}
+.cajaHeader__navBar {
+    width: 55vw;
+    color: #666;
+    display:block;
+    background-color: white;
+    border: solid 2px;
+    border-color: black;
+    padding: 2px;
+    margin: 4px;
+}
+.cajaHeader__p {
+    text-align: center;
+}
+.cajaMain__section-product{
+    background-color:white;
+    margin: 10px;
+}
+.lupa{
+    margin-left: 8px;
+    margin-top: 8px;
+    color: black;
+}
+.cajaFooter {
+    background-color: white;
+    margin: 0px 10px 10px 10px;
+    padding: 5px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    color: black;
+}
+ul li a {
+    margin-right: 2px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+.img-footer {
+    color: #0b2da6;
+    font-size: 36px;
+    margin: auto;
+    width: 15px;
+}
+.cajaFooter__sec{
+    text-align: center;
+    padding: 30px;
+}
