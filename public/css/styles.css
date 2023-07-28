@@ -11,16 +11,21 @@
 }
 .titulares {
     font-size: 24px;
+    width: 100vw;
+    text-align: center;
 }
 .descuentos {
     font-size: 16px;
+    margin: 0 0 10px 0;
+    color: #00a650;
 }
 .precios {
     font-size: 18px;
+    margin: auto;
 }
 .menuHamburguesa{
     border-radius: 5px;
-    width: 20px;
+    width: 30px;
     padding: 5px;
     background-color: blue;
     text-align: center;
@@ -30,7 +35,10 @@
 .cajaHeader{
     background-color:#EAC926;
     background-size: contain;
-    padding-bottom: 10px;
+    padding: 10px;
+}
+.cajaNav {
+    display: none;
 }
 .cajaHeader__navBar {
     width: 55vw;
@@ -45,18 +53,48 @@
 .cajaHeader__p {
     text-align: center;
 }
+.cajaMain__cajaProduct {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.cajaMain {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cajaMain__section {
+    text-align: center;
+}
 .cajaMain__section-product{
     background-color:white;
-    margin: 10px;
+    margin: 10px 0 10px 0px;
 }
+.cajaMain__section-product-desc {
+    border-top: #ebebeb solid 1px;
+    padding: 15px;
+}
+.circle-icon {
+    color: #00a650;
+    display: inline-block;
+    border: #00a650 solid 2px ;
+    border-radius: 50%; 
+    padding: 7px; 
+  }
 .lupa{
     margin-left: 8px;
     margin-top: 8px;
     color: black;
 }
 .cajaFooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     background-color: white;
-    margin: 0px 10px 10px 10px;
+    margin: 0px 20px 15px 20px;
     padding: 5px;
 }
 ul {
@@ -80,3 +118,59 @@ ul li a {
     text-align: center;
     padding: 30px;
 }
+
+.cajaFooter__copyright {
+    width: 100vw;
+}
+
+
+/* Media query para tablets */
+@media screen and (min-width: 669px) and (max-width: 1023px) {
+    .cajaNav {
+        display: contents;
+    }
+    .menuHamburguesa {
+        display: none;
+    }
+    .cajaMain__section-product {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .cajaFooter {
+        padding-top: 20px;
+    }
+    .cajaFooter__sec {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-around;
+    background-color: white;
+    margin: 0px 20px 15px 20px;
+    padding: 5px;
+    }
+    .cajaFooter__sec-p {
+        text-align: center;
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+    }
+}
+  
+  /* Media query para laptops y escritorio */
+  @media screen and (min-width: 1024px) {
+    .cajaNav {
+        display:contents;
+    }
+    .menuHamburguesa {
+        display: none;
+    }
+    .cajaMain__section-product {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .cajaFooter__sec-p {
+        width: 20vw;
+        margin: auto;
+        display: flex;
+        font-size: 20px;
+    }
+  }
+  
