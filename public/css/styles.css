@@ -2,62 +2,95 @@
     font-family: Roboto, sans-serif;
     box-sizing: border-box;
 }
+
 .cajaBody {
-    background-color:#ebebeb;
+    background-color: #ebebeb;
 }
-.cajaBody__logoMercadoLibre{
-    width: 70vw;
-    display: block;
+
+.cajaBody__logoMercadoLibre {
+    width: 40vw;
+    display: inline;
 }
+
 .titulares {
     font-size: 24px;
     width: 100vw;
     text-align: center;
 }
+
 .descuentos {
     font-size: 16px;
     margin: 0 0 10px 0;
     color: #00a650;
 }
+
 .precios {
     font-size: 18px;
     margin: auto;
 }
-.menuHamburguesa{
+
+.menuHamburguesa {
     border-radius: 5px;
     width: 30px;
     padding: 5px;
     background-color: blue;
     text-align: center;
     color: white;
-    margin:auto
+    margin: auto
 }
-.cajaHeader{
-    background-color:#EAC926;
+
+.cajaHeader {
+    background-color: #EAC926;
     background-size: contain;
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
 }
-.cajaNav {
+
+.cajaHeader__navList {
     display: none;
 }
+
 .cajaHeader__navBar {
-    width: 55vw;
+    width: 40vw;
     color: #666;
-    display:block;
+    display: flex;
     background-color: white;
     border: solid 2px;
-    border-color: black;
-    padding: 2px;
-    margin: 4px;
+    border-radius: 5%;
+    border-color: #ebebeb;
+    padding: 5px;
+    margin-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    align-items: center;
 }
+
+.cajaHeader__navBar-text {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex-grow: 1;
+    display: flex;
+}
+
 .cajaHeader__p {
     text-align: center;
+    width: 100vw;
 }
+
+.cajaMain__banner {
+    width: 100vw;
+}
+
 .cajaMain__cajaProduct {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .cajaMain {
     width: 90vw;
     margin: auto;
@@ -69,26 +102,30 @@
 .cajaMain__section {
     text-align: center;
 }
-.cajaMain__section-product{
-    background-color:white;
+
+.cajaMain__section-product {
+    background-color: white;
     margin: 10px 0 10px 0px;
 }
+
 .cajaMain__section-product-desc {
     border-top: #ebebeb solid 1px;
     padding: 15px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
-.circle-icon {
-    color: #00a650;
-    display: inline-block;
-    border: #00a650 solid 2px ;
-    border-radius: 50%; 
-    padding: 7px; 
-  }
-.lupa{
-    margin-left: 8px;
-    margin-top: 8px;
+
+.lupa {
     color: black;
+    background-color: #ffffff;
+    border: #ffffff;
+    margin-top: 2px;
+    margin-left: 4px;
+    border-left: #ebebeb solid 2px;
 }
+
 .cajaFooter {
     display: flex;
     flex-wrap: wrap;
@@ -97,80 +134,315 @@
     margin: 0px 20px 15px 20px;
     padding: 5px;
 }
+
 ul {
     list-style-type: none;
     padding: 0;
     color: black;
 }
-ul li a {
-    margin-right: 2px;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-}
+
 .img-footer {
     color: #0b2da6;
     font-size: 36px;
     margin: auto;
     width: 15px;
 }
-.cajaFooter__sec{
+
+.cajaFooter__sec {
     text-align: center;
     padding: 30px;
+    height: 45%;
 }
 
 .cajaFooter__copyright {
     width: 100vw;
 }
 
+main section article i {
+    color: #00a650;
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 87%;
+    top: -16%;
+    transition: transform 450ms;
+}
+
+
+
+
+
+
+/*     CSS DEL REGISTER */
+
+
+form > label {
+    font-weight: bold;
+    margin: 10px;
+}
+form > div {
+    margin: 10px;
+}
+.buttons {
+    text-align: center;
+}
+button {
+    background-color: #1259c3;
+    color: #fff;
+    width: 35%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+
+}
+
+.formContainer-1__form {
+    width: 90vw;
+    display: flex;
+    background-color: hsla(50, 82%, 53%, 0.9);
+    border-radius: 5%;
+    flex-direction: column;
+    padding: 20px;
+}
+
+input:focus {
+    border: black 1 px solid;
+}
+
+
+
+
+
 
 /* Media query para tablets */
 @media screen and (min-width: 669px) and (max-width: 1023px) {
-    .cajaNav {
-        display: contents;
+    .cajaHeader {
+        background-color: #EAC926;
+        background-size: contain;
+        padding: 10px 10px 0 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-right: 50px;
+        width: 100vw;
+        justify-content: space-evenly;
     }
+
+    .cajaHeader__navList {
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+    }
+
+    .cajaHeader__navList-ul {
+        display: flex;
+    }
+
+    .cajaHeader__navList-ul2 {
+        display: flex;
+    }
+
+    .cajaHeader__navList-ul-li a {
+        margin-right: 2px;
+        font-weight: bold;
+        font-size: 12px;
+        text-decoration: none;
+        color: black;
+        margin: 0 10px 0 10px;
+    }
+
+    .cajaHeader__navList-ul2-li a {
+        margin-right: 2px;
+        font-weight: bold;
+        font-size: 12px;
+        text-decoration: none;
+        color: black;
+        margin: 0 10px 0 10px;
+    }
+
+    .cajaBody__logoMercadoLibre {
+        width: 15vw;
+        display: inline;
+    }
+
+    .cajaHeader__navBar {
+        width: 50vw;
+        color: #666;
+        display: flex;
+        background-color: white;
+        border: solid 2px;
+        border-radius: 5%;
+        border-color: #ebebeb;
+        padding: 5px;
+        margin-left: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    .cajaHeader__p {
+        text-align: center;
+        width: 20vw;
+        margin-left: 30px;
+    }
+
     .menuHamburguesa {
         display: none;
     }
+
     .cajaMain__section-product {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
+
     .cajaFooter {
         padding-top: 20px;
     }
+
     .cajaFooter__sec {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-    justify-content: space-around;
-    background-color: white;
-    margin: 0px 20px 15px 20px;
-    padding: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        justify-content: space-around;
+        background-color: white;
+        margin: 0px 20px 15px 20px;
+        padding: 5px;
     }
+
     .cajaFooter__sec-p {
         text-align: center;
         display: flex;
         flex: 1;
         flex-wrap: wrap;
     }
-}
-  
-  /* Media query para laptops y escritorio */
-  @media screen and (min-width: 1024px) {
-    .cajaNav {
-        display:contents;
+
+    .img-footer {
+        display: flex;
+        color: #0b2da6;
+        font-size: 36px;
+        justify-content: center;
     }
+}
+
+
+
+/* Media query para laptops y escritorio */
+@media screen and (min-width: 1024px) {
+    .cajaHeader {
+        background-color: #EAC926;
+        background-size: contain;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .cajaBody__logoMercadoLibre {
+        width: 15vw;
+        display: inline;
+    }
+
+    .cajaHeader__p {
+        text-align: center;
+        width: 20vw;
+    }
+
+    .cajaHeader__navBar {
+        width: 40vw;
+        color: #666;
+        display: flex;
+        background-color: white;
+        border: solid 2px;
+        border-radius: 5%;
+        border-color: #ebebeb;
+        padding: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    .cajaHeader__navList {
+        display: flex;
+        width: 85vw;
+        justify-content: space-between;
+    }
+
+    .cajaHeader__navList-ul {
+        display: flex;
+    }
+
+    .cajaHeader__navList-ul2 {
+        display: flex;
+    }
+
+    .cajaHeader__navList-ul-li a {
+        margin-right: 2px;
+        font-weight: bold;
+        font-size: 16px;
+        text-decoration: none;
+        color: black;
+        margin: 0 10px 0 10px;
+    }
+
+    .cajaHeader__navList-ul2-li a {
+        margin-right: 2px;
+        font-weight: bold;
+        font-size: 16px;
+        text-decoration: none;
+        color: black;
+        margin: 0 10px 0 10px;
+    }
+
     .menuHamburguesa {
         display: none;
     }
+
+    .cajaMain {
+        width: 100vw;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
     .cajaMain__section-product {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 20%;
     }
+
     .cajaFooter__sec-p {
         width: 20vw;
         margin: auto;
         display: flex;
         font-size: 20px;
     }
-  }
-  
+
+    img {
+        width: 100%;
+    }
+
+    .formContainer-1__form {
+        width: 50vw;
+        display: flex;
+        background-color: hsla(50, 82%, 53%, 0.9);
+        border-radius: 5%;
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+
