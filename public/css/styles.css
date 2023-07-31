@@ -184,7 +184,7 @@ main section article i {
     transition: transform 450ms;
 }
 main section article i:hover {
-    transform: rotate(90);
+    transform: rotateZ(-90deg);
 }
 
 
