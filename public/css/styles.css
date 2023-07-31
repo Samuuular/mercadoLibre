@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 
-.cajaBody {
+body {
     background-color: #ebebeb;
 }
 
@@ -11,7 +11,13 @@
     width: 40vw;
     display: inline;
 }
-
+b {
+    opacity: 0%;
+    transition: opacity, 300ms;
+}
+b:hover {
+opacity: 100%;
+}
 .titulares {
     font-size: 24px;
     width: 100vw;
@@ -20,13 +26,15 @@
 
 .descuentos {
     font-size: 16px;
-    margin: 0 0 10px 0;
+    margin: 0 0 0px 0;
     color: #00a650;
+    width: 50%;
 }
 
 .precios {
     font-size: 18px;
     margin: auto;
+    width: 50%;
 }
 
 .menuHamburguesa {
@@ -114,7 +122,6 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
 }
 
 .lupa {
@@ -145,7 +152,10 @@ ul {
     color: #0b2da6;
     font-size: 36px;
     margin: auto;
-    width: 15px;
+    transition: color, 400ms;
+}
+.img-footer:hover {
+color: #EAC926;
 }
 
 .cajaFooter__sec {
@@ -173,13 +183,16 @@ main section article i {
     top: -16%;
     transition: transform 450ms;
 }
+main section article i:hover {
+    transform: rotate(90);
+}
 
 
 
 
 
 
-/*     CSS DEL REGISTER */
+/*     CSS DEL REGISTER/LOGIN */
 
 
 form > label {
@@ -192,7 +205,7 @@ form > div {
 .buttons {
     text-align: center;
 }
-button {
+.buttonRegister {
     background-color: #1259c3;
     color: #fff;
     width: 35%;
@@ -201,12 +214,24 @@ button {
     text-align: center;
     border: none;
 }
+.buttonLogin { 
+    background-color: #1259c3;
+    color: #fff;
+    width: 35%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    transition: background-color, 500ms;
+}
+.buttonLogin:hover {
+    background-color:#0022AA;
+}
 
 .mainContainer {
     display: flex;
     justify-content: center;
     margin: 40px;
-
 }
 
 .formContainer-1__form {
@@ -419,17 +444,28 @@ input:focus {
         justify-content: space-around;
         flex-wrap: wrap;
     }
-
     .cajaMain__section-product {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        width: 20%;
+        transition-property: box-shadow;
+        transition-duration: 500ms;
     }
-
+    .cajaMain__section-product:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+       
+    }
+    .cajaFooter {
+        height: 320px;
+    }
     .cajaFooter__sec-p {
         width: 20vw;
         margin: auto;
         display: flex;
         font-size: 20px;
+    }
+
+    .cajaFooter__copyright {
+        width: 100vw;
+        position: relative;
+        top: 65px;
     }
 
     img {
@@ -443,6 +479,8 @@ input:focus {
         border-radius: 5%;
         flex-direction: column;
         padding: 20px;
+        margin: 50px 0;
     }
+    
 }
 
